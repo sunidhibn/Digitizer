@@ -5,7 +5,7 @@ class InvoiceAdmin(admin.ModelAdmin):
     list_display=('id','invoice','created_at')
 
 class DigitizerAdmin(admin.ModelAdmin):
-    list_display=('invoice','data','status','digitized_at')
+    list_display=('pk','invoice','data','status','digitized_at')
 
 admin.site.register(Invoice,InvoiceAdmin)  
 admin.site.register(Digitizer,DigitizerAdmin) 

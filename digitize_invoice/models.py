@@ -8,7 +8,6 @@ class Invoice(models.Model):
     def __str__(self):
         return self.invoice.name
     
-
 class Digitizer(models.Model):
     invoice= models.OneToOneField(Invoice,on_delete=models.CASCADE,primary_key=True)
     data=models.JSONField(default=dict,blank=True,null=True)
