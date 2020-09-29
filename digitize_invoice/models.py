@@ -7,9 +7,10 @@ class Invoice(models.Model):
 
     def __str__(self):
         return self.invoice.name
+    
 
 class Digitizer(models.Model):
-    invoice= models.ForeignKey(Invoice,on_delete=models.CASCADE,related_name="digized")
-    data=models.JSONField(default=dict)
+    invoice= models.OneToOneField(Invoice,on_delete=models.CASCADE,primary_key=True)
+    data=models.JSONField(default=dict,blank=True,null=True)
     status=models.BooleanField(default=False)
-    digitized_at=models.DateTimeField()
+    digitized_at=models.DateTimeField(blank=True,null=True)
