@@ -6,7 +6,7 @@ class Invoice(models.Model):
     created_at=models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.invoice.name
+        return str(self.id)+"."+self.invoice.name
     
 class Digitizer(models.Model):
     invoice= models.OneToOneField(Invoice,on_delete=models.CASCADE,primary_key=True)
