@@ -50,8 +50,8 @@ curl --location --request PUT 'http://localhost:8000/invoice/20/' \
 }'
 ```
 
-It staff wants update digitised data , each piece ofinformation can be updated with its key.
-If he gives the existing key and updated data, the perticular field will be updated. Ex:contact no. is updated
-If he wants to add a field , he should provide new key and value to data. Ex: address field is added here
-He can also change the status of “digitized” by making status field as true/false
+* It staff wants update digitised data , each piece of information can be updated with its key.
+* If he gives the existing key and updated data, the perticular field will be updated. Ex:contact no. is updated
+* If he wants to add a field , he should provide new key and value to data. Ex: address field is added here
+* He can also change the status of “digitized” by making status field as true/false
 
