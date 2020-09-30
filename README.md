@@ -20,22 +20,23 @@ pip install -r requirements.txt
 ./manage.py runserver
 ```
 
-4. Access the API to upload invoice
+### APIs
+1. Access the API to upload invoice
 ```bash
 curl --location --request POST 'http://localhost:8000/upload/' \
 --form 'invoice=@/C:/Users/sunidhi/Desktop/myinvoice.pdf'
 ```
-5. Access the API to list all invoice details 
+2. Access the API to list all invoice details 
 ```bash
 curl --location --request GET 'http://localhost:8000/invoicelist' \
 --header 'Content-Type: application/json'
 ```
-6. Access the API to view individual invoice detail with id in url
+3. Access the API to view individual invoice detail with id in url
 ```bash
 curl --location --request GET 'http://localhost:8000/invoice/6' \
 --header 'Content-Type: application/json'
 ```
-7.Access the API to edit status of perticular invoice digitisation data with help of its id in url
+4.Access the API to edit status of perticular invoice digitisation data with help of its id in url
 ```bash
 curl --location --request PUT 'http://localhost:8000/invoice/20/' \
 --header 'Content-Type: application/json' \
